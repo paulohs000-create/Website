@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ponto & Linha Arranjos e Costuras</title>
+  <meta name="description" content="Arranjos, ajustes e reparações de roupa em São Domingos de Rana. Atendimento personalizado, bainhas, mangas, fechos, botões e muito mais." />
+  <style>
+    :root{
+      --rose:#b84d67;
+      --rose-dark:#8f314b;
+      --cream:#f6efe9;
+      --beige:#e9ddd4;
+      --text:#4a3b36;
+      --accent:#d8a6b2;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--cream);
+      line-height:1.6;
+    }
+
+    .container{
+      width:min(1100px, 92%);
+      margin:0 auto;
+    }
+
+    header{
+      background:linear-gradient(135deg, var(--rose-dark), var(--rose));
+      color:white;
+      padding:48px 0;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .hero h1{
+      font-size:clamp(32px, 5vw, 54px);
+      line-height:1.1;
+      margin:0 0 16px;
+    }
+
+    .hero p{
+      font-size:18px;
+      margin:0 0 24px;
+      max-width:650px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding:14px 20px;
+      border-radius:10px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      background:white;
+      color:var(--rose-dark);
+    }
+
+    .btn-primary:hover{opacity:.92}
+
+    .btn-secondary{
+      border:2px solid rgba(255,255,255,.75);
+      color:white;
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.08);
+    }
+
+    .card-photo{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      padding:16px;
+      border-radius:18px;
+      text-align:center;
+    }
+
+    .card-photo img{
+      width:100%;
+      max-width:360px;
+      border-radius:14px;
+      display:block;
+      margin:0 auto;
+    }
+
+    section{
+      padding:56px 0;
+    }
+
+    h2{
+      font-size:32px;
+      margin:0 0 18px;
+      color:var(--rose-dark);
+    }
+
+    .intro{
+      max-width:850px;
+      margin-bottom:20px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .info-card, .service-card, .about-box{
+      background:white;
+      border-radius:16px;
+      padding:22px;
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+    }
+
+    .service-card h3,
+    .info-card h3{
+      margin-top:0;
+      color:var(--rose-dark);
+    }
+
+    .services-list{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .about-layout{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:start;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .gallery img{
+      width:100%;
+      aspect-ratio: 4 / 5;
+      object-fit:cover;
+      border-radius:14px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      background:#fff;
+    }
+
+    .contact-box{
+      background:var(--beige);
+      border-radius:18px;
+      padding:28px;
+    }
+
+    .contact-box p{
+      margin:8px 0;
+      font-size:17px;
+    }
+
+    footer{
+      background:var(--rose-dark);
+      color:white;
+      padding:24px 0;
+      text-align:center;
+      font-size:14px;
+    }
+
+    @media (max-width: 900px){
+      .hero,
+      .about-layout,
+      .grid-3,
+      .gallery{
+        grid-template-columns:1fr;
+      }
+
+      header{
+        padding:36px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container hero">
+      <div>
+        <h1>Ponto & Linha<br>Arranjos e Costuras</h1>
+        <p>
+          Arranjos, ajustes e reparações de roupa com atendimento personalizado em
+          São Domingos de Rana. Damos nova vida às suas peças com cuidado,
+          experiência e atenção ao detalhe.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="https://wa.me/351925442437" target="_blank">Falar no WhatsApp</a>
+          <a class="btn btn-secondary" href="tel:+351925442437">Ligar agora</a>
+        </div>
+      </div>
+
+      <div class="card-photo">
+        <img src="/static/img/loja-frente.jpg" alt="Loja Ponto & Linha" />
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Sobre a loja</h2>
+      <p class="intro">
+        A Ponto & Linha é uma loja dedicada a arranjos, ajustes e reparações de roupa,
+        ajudando clientes a adaptar, recuperar e valorizar peças do dia a dia.
+        Trabalhamos com atenção ao detalhe e soluções práticas para vestidos,
+        calças, camisas, casacos, malhas e muito mais.
+      </p>
+
+      <div class="grid-3">
+        <div class="info-card">
+          <h3>Morada</h3>
+          <p>Av. Aristides de Sousa Mendes 79<br>2785-741 São Domingos de Rana</p>
+        </div>
+        <div class="info-card">
+          <h3>Telefone</h3>
+          <p><a href="tel:+351925442437">925 442 437</a></p>
+        </div>
+        <div class="info-card">
+          <h3>Instagram</h3>
+          <p><a href="https://www.instagram.com/pontoelinha_pt/" target="_blank">@pontoelinha_pt</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff8f3;">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="grid-3">
+        <div class="service-card">
+          <h3>Ajustes e bainhas</h3>
+          <ul class="services-list">
+            <li>Bainhas em calças, saias e vestidos</li>
+            <li>Apertar ou alargar peças</li>
+            <li>Ajuste de cintura e comprimento</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Reparações</h3>
+          <ul class="services-list">
+            <li>Fechos</li>
+            <li>Botões</li>
+            <li>Cerzidos e pequenos arranjos</li>
+            <li>Reparação de rasgos e desgaste</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Alterações personalizadas</h3>
+          <ul class="services-list">
+            <li>Ajuste de mangas</li>
+            <li>Ajustes em blusas e casacos</li>
+            <li>Alterações em vestidos e peças especiais</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container about-layout">
+      <div class="about-box">
+        <h2>Quem sou eu</h2>
+        <p>
+          Olá, sou Mónica, fundadora da Ponto & Linha. Tenho uma herança
+          ítalo-portuguesa-brasileira e uma carreira de mais de 25 anos como
+          estilista de moda, tendo trabalhado em empresas brasileiras como
+          Riachuelo, Tip Top e Fórum.
+        </p>
+        <p>
+          Depois de me mudar para Portugal com a minha família, trouxe comigo a
+          paixão pela moda que herdei das minhas avós e transformei essa experiência
+          num projeto dedicado à arte dos arranjos e da costura.
+        </p>
+        <p>
+          Hoje aplico esse conhecimento no cuidado e transformação das peças dos
+          nossos clientes, sempre com atenção ao detalhe e respeito pelo caimento
+          original de cada roupa.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <h2>Horário</h2>
+        <p><strong>Segunda a sábado:</strong> 9:30 às 20:00</p>
+        <p><strong>Domingos e feriados:</strong> 9:30 às 18:00</p>
+        <p>
+          Atendimento presencial na loja com acompanhamento personalizado para
+          cada peça.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff8f3;">
+    <div class="container">
+      <h2>Galeria</h2>
+      <p class="intro">
+        Algumas imagens reais da loja e do nosso trabalho.
+      </p>
+
+      <div class="gallery">
+        <img src="/static/img/loja-frente.jpg" alt="Frente da loja" />
+        <img src="/static/img/linhas.jpg" alt="Parede com linhas" />
+        <img src="/static/img/maquina.jpg" alt="Máquina de costura" />
+        <img src="/static/img/arranjos-1.jpg" alt="Exemplos de arranjos" />
+        <img src="/static/img/arranjos-2.jpg" alt="Exemplos de serviços" />
+        <img src="/static/img/arranjos-3.jpg" alt="Mais exemplos de serviços" />
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="contact-box">
+        <h2>Contacto e localização</h2>
+        <p><strong>Ponto & Linha Arranjos e Costuras</strong></p>
+        <p>Av. Aristides de Sousa Mendes 79, 2785-741 São Domingos de Rana</p>
+        <p>Telefone: <a href="tel:+351925442437">925 442 437</a></p>
+        <p>WhatsApp: <a href="https://wa.me/351925442437" target="_blank">Enviar mensagem</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/pontoelinha_pt/" target="_blank">@pontoelinha_pt</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © Ponto & Linha Arranjos e Costuras
+    </div>
+  </footer>
+
+</body>
+</html>
